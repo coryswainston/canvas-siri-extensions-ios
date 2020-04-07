@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,7 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+//        donateIntent()
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+    
+    private func donateIntent() {
+        let intent = GetCoursesIntent();
+        intent.suggestedInvocationPhrase = "Show me my classes"
+        let interaction = INInteraction(intent: intent, response: nil)
+        interaction.donate { (error) in
+            if error != nil {
+                print("did not succeed")
+            } else {
+                print("success donating interaction")
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,7 +62,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            let params = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems
+            if let code = params?.filter({$0.name == "code"}).first?.value {
+                print(code)
+                
+                let url = URL(string: "http://127.0.0.1:8888/auth/complete?code=\(code)")!
+                let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+                    guard let data = data else { return }
+                    let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                    if let dictionary = json as? [String: Any] {
+                        let token = dictionary["access_token"]
+                        UserDefaults.standard.set(token, forKey: "access_token")
+                    }
+                }
+                task.resume()
+            }
+        } else {
+            print("no code found")
+        }
+        
+    }
 
 }
 

@@ -13,7 +13,51 @@
 		12C691C5243C0D2E006B7111 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C691C3243C0D2E006B7111 /* Main.storyboard */; };
 		12C691C7243C0D34006B7111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12C691C6243C0D34006B7111 /* Assets.xcassets */; };
 		12C691CA243C0D34006B7111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C691C8243C0D34006B7111 /* LaunchScreen.storyboard */; };
+		12C691D9243C0DA3006B7111 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C691D8243C0DA3006B7111 /* IntentHandler.swift */; };
+		12C691E2243C0DA3006B7111 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C691E1243C0DA3006B7111 /* IntentsUI.framework */; };
+		12C691E5243C0DA3006B7111 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C691E4243C0DA3006B7111 /* IntentViewController.swift */; };
+		12C691E8243C0DA3006B7111 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C691E6243C0DA3006B7111 /* MainInterface.storyboard */; };
+		12C691EC243C0DA3006B7111 /* CanvasShortcutsExtUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 12C691DF243C0DA3006B7111 /* CanvasShortcutsExtUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		12C691EF243C0DA3006B7111 /* CanvasShortcutsExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 12C691D6243C0DA3006B7111 /* CanvasShortcutsExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		12C691F8243C0DC4006B7111 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 12C691F7243C0DC4006B7111 /* Intents.intentdefinition */; };
+		12C691F9243C0DC4006B7111 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 12C691F7243C0DC4006B7111 /* Intents.intentdefinition */; };
+		12C691FA243C0DC4006B7111 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 12C691F7243C0DC4006B7111 /* Intents.intentdefinition */; };
+		12C691FC243C4D24006B7111 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C691FB243C4D24006B7111 /* Course.swift */; };
+		12C691FF243C4D45006B7111 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C691FE243C4D45006B7111 /* Assignment.swift */; };
+		12C69202243C53B0006B7111 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C69201243C53AF006B7111 /* Request.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		12C691EA243C0DA3006B7111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12C691B2243C0D2E006B7111 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12C691DE243C0DA3006B7111;
+			remoteInfo = CanvasShortcutsExtUI;
+		};
+		12C691ED243C0DA3006B7111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12C691B2243C0D2E006B7111 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12C691D5243C0DA3006B7111;
+			remoteInfo = CanvasShortcutsExt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		12C691F6243C0DA3006B7111 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				12C691EF243C0DA3006B7111 /* CanvasShortcutsExt.appex in Embed App Extensions */,
+				12C691EC243C0DA3006B7111 /* CanvasShortcutsExtUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		12C691BA243C0D2E006B7111 /* CanvasShortcuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasShortcuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +68,19 @@
 		12C691C6243C0D34006B7111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12C691C9243C0D34006B7111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12C691CB243C0D34006B7111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12C691D1243C0D4C006B7111 /* CanvasShortcuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CanvasShortcuts.entitlements; sourceTree = "<group>"; };
+		12C691D6243C0DA3006B7111 /* CanvasShortcutsExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CanvasShortcutsExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		12C691D8243C0DA3006B7111 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		12C691DA243C0DA3006B7111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12C691DF243C0DA3006B7111 /* CanvasShortcutsExtUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CanvasShortcutsExtUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		12C691E1243C0DA3006B7111 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		12C691E4243C0DA3006B7111 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		12C691E7243C0DA3006B7111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		12C691E9243C0DA3006B7111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12C691F7243C0DC4006B7111 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		12C691FB243C4D24006B7111 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		12C691FE243C4D45006B7111 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		12C69201243C53AF006B7111 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +91,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		12C691D3243C0DA3006B7111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12C691DC243C0DA3006B7111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12C691E2243C0DA3006B7111 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		12C691B1243C0D2E006B7111 = {
 			isa = PBXGroup;
 			children = (
+				12C691F7243C0DC4006B7111 /* Intents.intentdefinition */,
 				12C691BC243C0D2E006B7111 /* CanvasShortcuts */,
+				12C691D7243C0DA3006B7111 /* CanvasShortcutsExt */,
+				12C691E3243C0DA3006B7111 /* CanvasShortcutsExtUI */,
+				12C691E0243C0DA3006B7111 /* Frameworks */,
 				12C691BB243C0D2E006B7111 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				12C691BA243C0D2E006B7111 /* CanvasShortcuts.app */,
+				12C691D6243C0DA3006B7111 /* CanvasShortcutsExt.appex */,
+				12C691DF243C0DA3006B7111 /* CanvasShortcutsExtUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +134,9 @@
 		12C691BC243C0D2E006B7111 /* CanvasShortcuts */ = {
 			isa = PBXGroup;
 			children = (
+				12C69200243C539F006B7111 /* Networking */,
+				12C691FD243C4D2F006B7111 /* Models */,
+				12C691D1243C0D4C006B7111 /* CanvasShortcuts.entitlements */,
 				12C691BD243C0D2E006B7111 /* AppDelegate.swift */,
 				12C691BF243C0D2E006B7111 /* SceneDelegate.swift */,
 				12C691C1243C0D2E006B7111 /* ViewController.swift */,
@@ -65,6 +146,50 @@
 				12C691CB243C0D34006B7111 /* Info.plist */,
 			);
 			path = CanvasShortcuts;
+			sourceTree = "<group>";
+		};
+		12C691D7243C0DA3006B7111 /* CanvasShortcutsExt */ = {
+			isa = PBXGroup;
+			children = (
+				12C691D8243C0DA3006B7111 /* IntentHandler.swift */,
+				12C691DA243C0DA3006B7111 /* Info.plist */,
+			);
+			path = CanvasShortcutsExt;
+			sourceTree = "<group>";
+		};
+		12C691E0243C0DA3006B7111 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12C691E1243C0DA3006B7111 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		12C691E3243C0DA3006B7111 /* CanvasShortcutsExtUI */ = {
+			isa = PBXGroup;
+			children = (
+				12C691E4243C0DA3006B7111 /* IntentViewController.swift */,
+				12C691E6243C0DA3006B7111 /* MainInterface.storyboard */,
+				12C691E9243C0DA3006B7111 /* Info.plist */,
+			);
+			path = CanvasShortcutsExtUI;
+			sourceTree = "<group>";
+		};
+		12C691FD243C4D2F006B7111 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12C691FB243C4D24006B7111 /* Course.swift */,
+				12C691FE243C4D45006B7111 /* Assignment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12C69200243C539F006B7111 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				12C69201243C53AF006B7111 /* Request.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +202,52 @@
 				12C691B6243C0D2E006B7111 /* Sources */,
 				12C691B7243C0D2E006B7111 /* Frameworks */,
 				12C691B8243C0D2E006B7111 /* Resources */,
+				12C691F6243C0DA3006B7111 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				12C691EB243C0DA3006B7111 /* PBXTargetDependency */,
+				12C691EE243C0DA3006B7111 /* PBXTargetDependency */,
 			);
 			name = CanvasShortcuts;
 			productName = CanvasShortcuts;
 			productReference = 12C691BA243C0D2E006B7111 /* CanvasShortcuts.app */;
 			productType = "com.apple.product-type.application";
+		};
+		12C691D5243C0DA3006B7111 /* CanvasShortcutsExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12C691F3243C0DA3006B7111 /* Build configuration list for PBXNativeTarget "CanvasShortcutsExt" */;
+			buildPhases = (
+				12C691D2243C0DA3006B7111 /* Sources */,
+				12C691D3243C0DA3006B7111 /* Frameworks */,
+				12C691D4243C0DA3006B7111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CanvasShortcutsExt;
+			productName = CanvasShortcutsExt;
+			productReference = 12C691D6243C0DA3006B7111 /* CanvasShortcutsExt.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		12C691DE243C0DA3006B7111 /* CanvasShortcutsExtUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12C691F0243C0DA3006B7111 /* Build configuration list for PBXNativeTarget "CanvasShortcutsExtUI" */;
+			buildPhases = (
+				12C691DB243C0DA3006B7111 /* Sources */,
+				12C691DC243C0DA3006B7111 /* Frameworks */,
+				12C691DD243C0DA3006B7111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CanvasShortcutsExtUI;
+			productName = CanvasShortcutsExtUI;
+			productReference = 12C691DF243C0DA3006B7111 /* CanvasShortcutsExtUI.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +260,12 @@
 				ORGANIZATIONNAME = "Cory Swainston";
 				TargetAttributes = {
 					12C691B9243C0D2E006B7111 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					12C691D5243C0DA3006B7111 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					12C691DE243C0DA3006B7111 = {
 						CreatedOnToolsVersion = 11.4;
 					};
 				};
@@ -116,6 +284,8 @@
 			projectRoot = "";
 			targets = (
 				12C691B9243C0D2E006B7111 /* CanvasShortcuts */,
+				12C691D5243C0DA3006B7111 /* CanvasShortcutsExt */,
+				12C691DE243C0DA3006B7111 /* CanvasShortcutsExtUI */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +301,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		12C691D4243C0DA3006B7111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12C691DD243C0DA3006B7111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12C691E8243C0DA3006B7111 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,13 +323,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12C691FF243C4D45006B7111 /* Assignment.swift in Sources */,
 				12C691C2243C0D2E006B7111 /* ViewController.swift in Sources */,
 				12C691BE243C0D2E006B7111 /* AppDelegate.swift in Sources */,
+				12C691FC243C4D24006B7111 /* Course.swift in Sources */,
+				12C69202243C53B0006B7111 /* Request.swift in Sources */,
+				12C691F8243C0DC4006B7111 /* Intents.intentdefinition in Sources */,
 				12C691C0243C0D2E006B7111 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		12C691D2243C0DA3006B7111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12C691F9243C0DC4006B7111 /* Intents.intentdefinition in Sources */,
+				12C691D9243C0DA3006B7111 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12C691DB243C0DA3006B7111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12C691FA243C0DC4006B7111 /* Intents.intentdefinition in Sources */,
+				12C691E5243C0DA3006B7111 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12C691EB243C0DA3006B7111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12C691DE243C0DA3006B7111 /* CanvasShortcutsExtUI */;
+			targetProxy = 12C691EA243C0DA3006B7111 /* PBXContainerItemProxy */;
+		};
+		12C691EE243C0DA3006B7111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12C691D5243C0DA3006B7111 /* CanvasShortcutsExt */;
+			targetProxy = 12C691ED243C0DA3006B7111 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		12C691C3243C0D2E006B7111 /* Main.storyboard */ = {
@@ -161,6 +381,14 @@
 				12C691C9243C0D34006B7111 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		12C691E6243C0DA3006B7111 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12C691E7243C0DA3006B7111 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,9 +511,12 @@
 		12C691CF243C0D34006B7111 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CanvasShortcuts/CanvasShortcuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CanvasShortcuts/Info.plist;
+				INTENTS_CODEGEN_LANGUAGE = Swift;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,15 +531,90 @@
 		12C691D0243C0D34006B7111 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CanvasShortcuts/CanvasShortcuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CanvasShortcuts/Info.plist;
+				INTENTS_CODEGEN_LANGUAGE = Swift;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = coryswainston.CanvasShortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		12C691F1243C0DA3006B7111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CanvasShortcutsExtUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coryswainston.CanvasShortcuts.CanvasShortcutsExtUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		12C691F2243C0DA3006B7111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CanvasShortcutsExtUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coryswainston.CanvasShortcuts.CanvasShortcutsExtUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		12C691F4243C0DA3006B7111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CanvasShortcutsExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coryswainston.CanvasShortcuts.CanvasShortcutsExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		12C691F5243C0DA3006B7111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CanvasShortcutsExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coryswainston.CanvasShortcuts.CanvasShortcutsExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,6 +637,24 @@
 			buildConfigurations = (
 				12C691CF243C0D34006B7111 /* Debug */,
 				12C691D0243C0D34006B7111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12C691F0243C0DA3006B7111 /* Build configuration list for PBXNativeTarget "CanvasShortcutsExtUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12C691F1243C0DA3006B7111 /* Debug */,
+				12C691F2243C0DA3006B7111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12C691F3243C0DA3006B7111 /* Build configuration list for PBXNativeTarget "CanvasShortcutsExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12C691F4243C0DA3006B7111 /* Debug */,
+				12C691F5243C0DA3006B7111 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
