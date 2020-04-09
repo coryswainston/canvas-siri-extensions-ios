@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CanvasShortcuts
 //
-//  Created by Cory Swainston on 4/6/20.
+//  
 //  Copyright © 2020 Cory Swainston. All rights reserved.
 //
 

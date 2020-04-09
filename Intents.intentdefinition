@@ -3,7 +3,51 @@
 <plist version="1.0">
 <dict>
 	<key>INEnums</key>
-	<array/>
+	<array>
+		<dict>
+			<key>INEnumDisplayName</key>
+			<string>Date Range</string>
+			<key>INEnumDisplayNameID</key>
+			<string>KdXchI</string>
+			<key>INEnumGeneratesHeader</key>
+			<true/>
+			<key>INEnumName</key>
+			<string>DateRange</string>
+			<key>INEnumType</key>
+			<string>Regular</string>
+			<key>INEnumValues</key>
+			<array>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>unknown</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>QyRNNq</string>
+					<key>INEnumValueName</key>
+					<string>unknown</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>today</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>AmOG2Q</string>
+					<key>INEnumValueIndex</key>
+					<integer>1</integer>
+					<key>INEnumValueName</key>
+					<string>today</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>this week</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>OxVPH3</string>
+					<key>INEnumValueIndex</key>
+					<integer>2</integer>
+					<key>INEnumValueName</key>
+					<string>thisWeek</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
 	<key>INIntentDefinitionModelVersion</key>
 	<string>1.1</string>
 	<key>INIntentDefinitionNamespace</key>
@@ -18,7 +62,7 @@
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
-			<string>generic</string>
+			<string>information</string>
 			<key>INIntentDescription</key>
 			<string>Show all your courses</string>
 			<key>INIntentDescriptionID</key>
@@ -49,7 +93,7 @@
 				<array>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>Your course is ${course}</string>
+						<string>Here are your classes this semester.</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>vhtAmO</string>
 						<key>INIntentResponseCodeName</key>
@@ -65,26 +109,17 @@
 						<key>INIntentResponseCodeName</key>
 						<string>failure</string>
 					</dict>
-				</array>
-				<key>INIntentResponseLastParameterTag</key>
-				<integer>1</integer>
-				<key>INIntentResponseParameters</key>
-				<array>
 					<dict>
-						<key>INIntentResponseParameterDisplayName</key>
-						<string>Course</string>
-						<key>INIntentResponseParameterDisplayNameID</key>
-						<string>BYnrQH</string>
-						<key>INIntentResponseParameterDisplayPriority</key>
-						<integer>1</integer>
-						<key>INIntentResponseParameterName</key>
-						<string>course</string>
-						<key>INIntentResponseParameterTag</key>
-						<integer>1</integer>
-						<key>INIntentResponseParameterType</key>
-						<string>String</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Looks like you need to sign in first.</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>XVU2y1</string>
+						<key>INIntentResponseCodeName</key>
+						<string>unauthenticated</string>
 					</dict>
 				</array>
+				<key>INIntentResponseLastParameterTag</key>
+				<integer>2</integer>
 			</dict>
 			<key>INIntentTitle</key>
 			<string>Get Courses</string>
@@ -93,7 +128,264 @@
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>
-			<string>Do</string>
+			<string>View</string>
+		</dict>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>information</string>
+			<key>INIntentConfigurable</key>
+			<true/>
+			<key>INIntentDescription</key>
+			<string>Show all of your assignments</string>
+			<key>INIntentDescriptionID</key>
+			<string>njhv3p</string>
+			<key>INIntentInput</key>
+			<string>dateRange</string>
+			<key>INIntentKeyParameter</key>
+			<string>dateRange</string>
+			<key>INIntentLastParameterTag</key>
+			<integer>4</integer>
+			<key>INIntentManagedParameterCombinations</key>
+			<dict>
+				<key>dateRange</key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Show my assignments for ${dateRange}</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>h88BWc</string>
+					<key>INIntentParameterCombinationUpdatesLinked</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>INIntentName</key>
+			<string>GetAssignments</string>
+			<key>INIntentParameterCombinations</key>
+			<dict>
+				<key>dateRange</key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Show my assignments for ${dateRange}</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>wXPYJ4</string>
+				</dict>
+			</dict>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterCustomDisambiguation</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Date Range</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>V9oHqJ</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>DateRange</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>xSLXZb</string>
+					<key>INIntentParameterName</key>
+					<string>dateRange</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>What dates do you want assignments for?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>xRFNho</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${dateRange}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>yEmYvO</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Which one?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>6JJpv8</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationSelection</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${dateRange}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>0XjIGK</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>4</integer>
+					<key>INIntentParameterType</key>
+					<string>Integer</string>
+				</dict>
+			</array>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Looks like you need to sign in first.</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>zkeISs</string>
+						<key>INIntentResponseCodeName</key>
+						<string>unauthenticated</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>Get Assignments</string>
+			<key>INIntentTitleID</key>
+			<string>06F0GY</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>View</string>
+		</dict>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>information</string>
+			<key>INIntentConfigurable</key>
+			<true/>
+			<key>INIntentDescription</key>
+			<string>Show your grade for a class</string>
+			<key>INIntentDescriptionID</key>
+			<string>EQ08Gn</string>
+			<key>INIntentInput</key>
+			<string>course</string>
+			<key>INIntentLastParameterTag</key>
+			<integer>3</integer>
+			<key>INIntentManagedParameterCombinations</key>
+			<dict>
+				<key>course</key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>What's my grade in ${course}?</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>FV675B</string>
+					<key>INIntentParameterCombinationUpdatesLinked</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>INIntentName</key>
+			<string>GetGrade</string>
+			<key>INIntentParameterCombinations</key>
+			<dict>
+				<key>course</key>
+				<dict>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string>Shows grade for a specific class</string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>9y7Zz5</string>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>What's my grade in ${course}?</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>NLBOSq</string>
+				</dict>
+			</dict>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterDisplayName</key>
+					<string>Course</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>wZnYDS</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>course</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Which class do you want a grade for?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>LvY9Um</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>3</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
+			</array>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Looks like you need to sign in first.</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>4efRIQ</string>
+						<key>INIntentResponseCodeName</key>
+						<string>unauthenticated</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>Get Grade</string>
+			<key>INIntentTitleID</key>
+			<string>yIHpkt</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>View</string>
 		</dict>
 	</array>
 	<key>INTypes</key>

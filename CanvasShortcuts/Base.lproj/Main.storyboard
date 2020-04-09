@@ -15,36 +15,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-mf-WuM">
+                                <rect key="frame" x="339" y="832" width="55" height="30"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ffq-Eq-izX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siri Shortcuts for Canvas" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taQ-EB-4nI">
+                                <rect key="frame" x="20" y="44" width="374" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75S-bh-h62">
-                                <rect key="frame" x="186" y="64" width="42" height="30"/>
-                                <state key="normal" title="Log In"/>
+                                <rect key="frame" x="113.5" y="425.5" width="187" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Log Into Canvas"/>
                                 <connections>
                                     <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ie8-FX-LWA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-p1-tm7">
-                                <rect key="frame" x="164" y="102" width="86" height="30"/>
-                                <state key="normal" title="Get Courses"/>
-                                <connections>
-                                    <action selector="getCourses:" destination="BYZ-38-t0r" eventType="touchUpInside" id="az1-ns-ijs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXA-Zz-c36">
-                                <rect key="frame" x="148.5" y="140" width="117" height="30"/>
-                                <state key="normal" title="Get Assignments"/>
-                                <connections>
-                                    <action selector="getAssignments:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FJM-zT-vp5"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="75S-bh-h62" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3px-Y5-t4n"/>
-                            <constraint firstItem="gXA-Zz-c36" firstAttribute="top" secondItem="ppO-p1-tm7" secondAttribute="bottom" constant="8" id="Nbr-5a-tCH"/>
-                            <constraint firstItem="ppO-p1-tm7" firstAttribute="centerX" secondItem="75S-bh-h62" secondAttribute="centerX" id="ex4-h5-QHR"/>
-                            <constraint firstItem="gXA-Zz-c36" firstAttribute="centerX" secondItem="ppO-p1-tm7" secondAttribute="centerX" id="gTg-dy-MlE"/>
-                            <constraint firstItem="ppO-p1-tm7" firstAttribute="top" secondItem="75S-bh-h62" secondAttribute="bottom" constant="8" id="ruz-NS-KrA"/>
-                            <constraint firstItem="75S-bh-h62" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wod-du-Wtd"/>
+                            <constraint firstItem="KeW-mf-WuM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TOp-68-wMV"/>
+                            <constraint firstItem="KeW-mf-WuM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="chQ-mt-0sS"/>
+                            <constraint firstItem="75S-bh-h62" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="grV-uI-lm4"/>
+                            <constraint firstItem="75S-bh-h62" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kOs-pa-jwi"/>
+                            <constraint firstItem="taQ-EB-4nI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lxW-ia-rWJ"/>
+                            <constraint firstItem="taQ-EB-4nI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s35-tG-1zC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="taQ-EB-4nI" secondAttribute="trailing" constant="20" id="sGV-1x-Xs0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

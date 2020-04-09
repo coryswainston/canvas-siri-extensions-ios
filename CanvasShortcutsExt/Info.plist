@@ -30,7 +30,9 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
+				<string>GetAssignmentsIntent</string>
 				<string>GetCoursesIntent</string>
+				<string>GetGradeIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

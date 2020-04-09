@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  CanvasShortcuts
 //
-//  Created by Cory Swainston on 4/6/20.
+//  
 //  Copyright © 2020 Cory Swainston. All rights reserved.
 //
 
@@ -18,13 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-//        donateIntent()
+        donateIntent(GetCoursesIntent(), "Show me my classes")
+        
+        let getAssignmentsIntent = GetAssignmentsIntent()
+        getAssignmentsIntent.dateRange = DateRange.today
+        donateIntent(getAssignmentsIntent, "Show me my assignments")
+        
+        let getGradeIntent = GetGradeIntent()
+        getGradeIntent.course = "English"
+        donateIntent(getGradeIntent, "What is my grade?")
+        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
     
-    private func donateIntent() {
-        let intent = GetCoursesIntent();
-        intent.suggestedInvocationPhrase = "Show me my classes"
+    private func donateIntent(_ intent: INIntent, _ suggestedPhrase: String = "") {
+        intent.suggestedInvocationPhrase = suggestedPhrase
         let interaction = INInteraction(intent: intent, response: nil)
         interaction.donate { (error) in
             if error != nil {
@@ -69,13 +77,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             if let code = params?.filter({$0.name == "code"}).first?.value {
                 print(code)
                 
-                let url = URL(string: "http://127.0.0.1:8888/auth/complete?code=\(code)")!
+                let url = URL(string: "\(Constants.baseURL)/auth/complete?code=\(code)")!
                 let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
                     guard let data = data else { return }
                     let json = try? JSONSerialization.jsonObject(with: data, options: [])
                     if let dictionary = json as? [String: Any] {
-                        let token = dictionary["access_token"]
-                        UserDefaults.standard.set(token, forKey: "access_token")
+                        let token = dictionary["access_token"] as! String
+                        setAccessToken(token: token)
                     }
                 }
                 task.resume()

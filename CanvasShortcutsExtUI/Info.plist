@@ -26,7 +26,9 @@
 		<dict>
 			<key>IntentsSupported</key>
 			<array>
+				<string>GetAssignmentsIntent</string>
 				<string>GetCoursesIntent</string>
+				<string>GetGradeIntent</string>
 				<string>INSendMessageIntent</string>
 			</array>
 		</dict>
